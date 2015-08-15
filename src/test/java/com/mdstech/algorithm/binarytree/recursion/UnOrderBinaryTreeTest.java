@@ -24,7 +24,16 @@ public class UnOrderBinaryTreeTest {
 		unOrderBinaryTree.addTreeNode(10, "Test10");
 		unOrderBinaryTree.addTreeNode(11, "Test11");
 		unOrderBinaryTree.addTreeNode(12, "Test12");
+		unOrderBinaryTree.addTreeNode(13, "Test13");
+		unOrderBinaryTree.addTreeNode(14, "Test14");
+		unOrderBinaryTree.addTreeNode(15, "Test15");
+		unOrderBinaryTree.addTreeNode(16, "Test16");
+		unOrderBinaryTree.addTreeNode(17, "Test17");
+		unOrderBinaryTree.addTreeNode(18, "Test18");
 		
-		unOrderBinaryTree.getRootNode().printTree(new OutputStreamWriter(System.out));
+		OutputStreamWriter out = new OutputStreamWriter(System.out);
+		unOrderBinaryTree.getRootNode().printTree(out);
+		out.flush();
+		out.close();
 	}
 }

@@ -60,6 +60,10 @@ public class TreeNode {
 		if(rightNode != null) {
 			rightNode.printTree(outputStreamWriter, true, "");
 		}
+		printNodeValue(outputStreamWriter);
+		if(leftNode != null) {
+			leftNode.printTree(outputStreamWriter, false, "");
+		}
 	}
 
 	private void printTree(OutputStreamWriter outputStreamWriter, boolean isRight, String indent) throws IOException {

@@ -22,6 +22,7 @@ public class UnOrderBinaryTree {
 		}
 		else if(parentNode.getRightNode() == null) {
 			parentNode.setRightNode(new TreeNode(index, name));
+			parentNode.setFullNode(true);
 			isNodeInserted = true;
 		}
 		
@@ -35,7 +36,9 @@ public class UnOrderBinaryTree {
 		if(currentMarkerNode.getLeftNode().isFullNode() && !currentMarkerNode.getRightNode().isFullNode()) {
 			currentNode = currentMarkerNode.getRightNode();
 		}
-		currentNode = currentMarkerNode.getLeftNode();
+		else {
+			currentNode = currentMarkerNode.getLeftNode();
+		}
 		return currentNode;
 	}
 
