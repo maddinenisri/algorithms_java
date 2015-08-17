@@ -39,10 +39,10 @@ public class UnOrderBinaryTree {
 	}
 	
 	private TreeNode findParetNodeToAddNode() {
-		TreeNode parentNode = treeQueue.element();
 		if(treeQueue.element().isFullNode()) {
 			treeQueue.remove();
 		}
+		TreeNode parentNode = treeQueue.element();
 		return parentNode;
 	}
 	
