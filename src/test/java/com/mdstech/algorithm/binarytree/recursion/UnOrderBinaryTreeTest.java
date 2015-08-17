@@ -25,6 +25,27 @@ public class UnOrderBinaryTreeTest {
 		unOrderBinaryTree.addTreeNode(11, "Test11");
 		unOrderBinaryTree.addTreeNode(12, "Test12");
 		
-		unOrderBinaryTree.getRootNode().printTree(new OutputStreamWriter(System.out));
+		StringBuffer sb = new StringBuffer();
+		OutputStreamWriter out = new OutputStreamWriter(System.out);
+		unOrderdBinaryTree.getRoot().printTree(out);
+		unOrderdBinaryTree.inOrderTraversal(unOrderdBinaryTree.getRoot(), sb);
+		out.append("--In Order Start---\n");
+		out.append(sb.toString()+"\n");
+		out.append("--In Order End--\n");
+
+		sb = new StringBuffer();
+		unOrderdBinaryTree.preOrderTraversal(unOrderdBinaryTree.getRoot(), sb);
+		out.append("--Pre Order Start---\n");
+	    	out.append(sb.toString()+"\n");
+	    	out.append("--Pre Order End--\n");
+
+	    	sb = new StringBuffer();
+	    	unOrderdBinaryTree.postOrderTraversal(unOrderdBinaryTree.getRoot(), sb);
+	    	out.append("--Post Order Start---\n");
+	    	out.append(sb.toString()+"\n");
+	    	out.append("--Post Order End--\n");
+
+	    	out.flush();
+	    	out.close();
 	}
 }
