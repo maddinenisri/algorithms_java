@@ -33,7 +33,7 @@ public class UnOrderBinaryTree {
 	}
 	
 	/**
-	 * InOrder - Parent --> Left --> Right
+	 * PreOrder - Parent --> Left --> Right
 	 */
 	public void preOrderTraversal(TreeNode treeNode, StringBuffer sb) {
 		sb.append(treeNode.getName()+"("+treeNode.getKey()+") -->");
@@ -47,7 +47,7 @@ public class UnOrderBinaryTree {
 	}
 
 	/**
-	 * InOrder - Left --> Right --> Parent
+	 * PostOrder - Left --> Right --> Parent
 	 */
 	public void postOrderTraversal(TreeNode treeNode, StringBuffer sb) {
 		if(treeNode.getLeftNode() != null) {
